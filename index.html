@@ -4,19 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Grade 8 Curriculum Map</title>
+  <title>Grade 8 Math Curriculum</title>
 
-  <meta http-equiv="refresh" content="0; url=curriculum-map8.html">
+  <style>
+    :root {
+      --navy: #16233b;
+      --paper: #f4f1e9;
+      --gold: #d6a72c;
+      --indigo: #3b5bc0;
+      --text: #222a35;
+      --muted: #667085;
+    }
 
-  <script>
-    window.location.replace("curriculum-map8.html");
-  </script>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: var(--navy);
+      color: var(--text);
+    }
+
+    .page {
+      width: min(960px, 92%);
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+
+    header {
+      margin-bottom: 32px;
+      color: white;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+    }
+
+    header p {
+      margin: 0;
+      color: #c9d0dc;
+      font-size: 1.1rem;
+    }
+
+    .card {
+      display: block;
+      margin-bottom: 18px;
+      padding: 24px;
+      color: var(--text);
+      text-decoration: none;
+      background: var(--paper);
+      border-left: 8px solid var(--indigo);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      transition: transform 0.2s ease;
+    }
+
+    .card.primary {
+      border-left-color: var(--gold);
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    .card h2 {
+      margin: 0 0 7px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .coming-soon {
+      opacity: 0.65;
+    }
+  </style>
 </head>
 
 <body>
-  <p>
-    Opening the
-    <a href="curriculum-map8.html">Grade 8 Curriculum Map</a>...
-  </p>
+  <main class="page">
+
+    <header>
+      <h1>Grade 8 Math</h1>
+      <p>Curriculum map, unit plans, pacing, and teacher-facing resources</p>
+    </header>
+
+    <a class="card primary" href="curriculum-map8.html">
+      <h2>Grade 8 Curriculum Map</h2>
+      <p>
+        View the year at a glance, standards alignment,
+        unit sequence, and pacing.
+      </p>
+    </a>
+
+    <a class="card" href="unit-1-expressions-equations.html">
+      <h2>Unit 1: Expressions &amp; Equations</h2>
+      <p>Open the complete teacher-facing Unit 1 plan.</p>
+    </a>
+
+    <div class="card coming-soon">
+      <h2>Unit 2: Inequalities</h2>
+      <p>Unit plan in development.</p>
+    </div>
+
+  </main>
 </body>
 </html>

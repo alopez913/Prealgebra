@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grade 8 Curriculum Map</title>
+
+  <meta http-equiv="refresh" content="0; url=curriculum-map8.html">
+
+  <script>
+    window.location.replace("curriculum-map8.html");
+  </script>
+</head>
+
+<body>
+  <p>
+    Opening the
+    <a href="curriculum-map8.html">Grade 8 Curriculum Map</a>...
+  </p>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unit 1 Expressions and Equations teacher planning hub and daily lesson library.">
+  <title>Unit 1: Expressions & Equations | Grade 8 Pre-Algebra</title>
+
+  <style>
+    :root {
+      --ink: #121418;
+      --ink-2: #1b1e24;
+      --ink-3: #292d35;
+      --gold: #d8aa28;
+      --gold-deep: #9b7210;
+      --gold-pale: #f3e4aa;
+      --cream: #f5f1e8;
+      --paper: #fbfaf6;
+      --white: #ffffff;
+      --text: #20242b;
+      --muted: #69717e;
+      --line: #d9d3c7;
+      --shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(115deg, rgba(216,170,40,0.055) 0 1px, transparent 1px 92px),
+        linear-gradient(25deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 118px),
+        var(--ink);
+      background-size: 92px 92px, 118px 118px, auto;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 30px 0 72px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .brand::before {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 999px;
+    }
+
+    .home-link {
+      color: #d9dde4;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .home-link:hover,
+    .home-link:focus-visible {
+      color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 5vw, 52px);
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.045), transparent 60%),
+        var(--ink-2);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-top: 7px solid var(--gold);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "01";
+      position: absolute;
+      right: 3px;
+      bottom: -55px;
+      color: rgba(255,255,255,0.035);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(10rem, 22vw, 17rem);
+      font-weight: 900;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 11px;
+      color: #efd373;
+      font-size: 0.77rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 6vw, 4.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.038em;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 20px 0 0;
+      color: #d7dce4;
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 17px;
+      border-radius: 999px;
+      font-weight: 850;
+      text-decoration: none;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible { transform: translateY(-2px); }
+
+    .button.primary {
+      color: var(--ink);
+      background: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .button.secondary {
+      color: var(--white);
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+
+    .snapshot {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .snapshot-card {
+      padding: 18px;
+      color: var(--text);
+      background: var(--cream);
+      border-top: 5px solid var(--gold);
+      border-radius: 13px;
+      box-shadow: var(--shadow);
+    }
+
+    .snapshot-card span {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--gold-deep);
+      font-size: 0.7rem;
+      font-weight: 950;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-card strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+    }
+
+    .section { margin-top: 34px; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 15px;
+      color: var(--white);
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+    }
+
+    .section-heading p {
+      max-width: 570px;
+      margin: 0;
+      color: #b9c0cc;
+      line-height: 1.5;
+      text-align: right;
+    }
+
+    .plan-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 25px;
+      color: var(--text);
+      background: var(--cream);
+      border-left: 8px solid var(--gold);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .plan-card h3 {
+      margin: 0 0 7px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+    }
+
+    .plan-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .plan-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 43px;
+      padding: 10px 15px;
+      color: var(--ink);
+      background: var(--gold);
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .lesson-library {
+      overflow: hidden;
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-library-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 23px 25px;
+      color: var(--white);
+      background: var(--ink-2);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .lesson-library-header h3 {
+      margin: 4px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+    }
+
+    .lesson-library-header p {
+      margin: 6px 0 0;
+      color: #c7ced9;
+      line-height: 1.5;
+    }
+
+    .lesson-count {
+      flex: 0 0 auto;
+      padding: 8px 11px;
+      color: #4b3905;
+      background: var(--gold-pale);
+      border-radius: 999px;
+      font-size: 0.73rem;
+      font-weight: 950;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .lesson-row {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) minmax(260px, auto);
+      gap: 18px;
+      align-items: center;
+      padding: 19px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lesson-row:last-child { border-bottom: 0; }
+
+    .lesson-id {
+      margin: 0 0 4px;
+      color: var(--gold-deep);
+      font-size: 0.72rem;
+      font-weight: 950;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .lesson-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.14rem;
+      line-height: 1.27;
+    }
+
+    .day-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .day-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 82px;
+      min-height: 40px;
+      padding: 9px 13px;
+      color: var(--white);
+      background: var(--ink-3);
+      border: 1px solid var(--ink-3);
+      border-radius: 10px;
+      font-size: 0.83rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
+    }
+
+    .day-link:hover,
+    .day-link:focus-visible {
+      transform: translateY(-2px);
+      color: var(--ink);
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .footer {
+      margin-top: 35px;
+      padding: 18px 4px 0;
+      color: #aeb5c0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.87rem;
+      line-height: 1.55;
+    }
+
+    .footer strong { color: #f0f2f5; }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(94%, 680px);
+        padding-top: 20px;
+      }
+
+      .topbar,
+      .section-heading,
+      .lesson-library-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section-heading p { text-align: left; }
+
+      .snapshot { grid-template-columns: 1fr; }
+
+      .plan-card,
+      .lesson-row {
+        grid-template-columns: 1fr;
+      }
+
+      .day-links { justify-content: flex-start; }
+    }
+
+    @media print {
+      body { background: white; }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero,
+      .snapshot-card,
+      .plan-card,
+      .lesson-library { box-shadow: none; }
+
+      .hero-actions,
+      .topbar { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="topbar">
+      <div class="brand">Beggs Demons Mathematics</div>
+      <a class="home-link" href="index.html">← Curriculum Home</a>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">Grade 8 Pre-Algebra · Unit 1</p>
+      <h1>Expressions &amp; Equations</h1>
+      <p class="hero-copy">
+        Build fluency with algebraic expressions, then use properties of equality
+        to write and solve increasingly complex equations.
+      </p>
+
+      <nav class="hero-actions" aria-label="Unit 1 quick links">
+        <a class="button primary" href="unit-1-expressions-equations.html">Open Full Unit Plan</a>
+        <a class="button secondary" href="#daily-lessons">Daily Lesson Library</a>
+        <a class="button secondary" href="curriculum-map8.html">Curriculum Map</a>
+      </nav>
+    </header>
+
+    <div class="snapshot" aria-label="Unit 1 snapshot">
+      <div class="snapshot-card">
+        <span>Instructional Focus</span>
+        <strong>Expressions → Equations</strong>
+      </div>
+      <div class="snapshot-card">
+        <span>Daily Plans Available</span>
+        <strong>11 teacher-facing plans</strong>
+      </div>
+      <div class="snapshot-card">
+        <span>Core Standards</span>
+        <strong>PA.A.3 · PA.A.4</strong>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="unit-plan-heading">
+      <div class="section-heading">
+        <h2 id="unit-plan-heading">Unit Planning Document</h2>
+        <p>Open the full teacher-facing unit plan for pacing, standards, instructional approach, and chapter structure.</p>
+      </div>
+
+      <div class="plan-card">
+        <div>
+          <h3>Unit 1 Full Plan</h3>
+          <p>
+            Chapter purpose, success criteria, instructional conventions, pacing,
+            assessment notes, and teacher supports.
+          </p>
+        </div>
+        <a class="plan-link" href="unit-1-expressions-equations.html">Open Unit Plan →</a>
+      </div>
+    </section>
+
+    <section class="section" id="daily-lessons" aria-labelledby="lesson-heading">
+      <div class="section-heading">
+        <h2 id="lesson-heading">Daily Lesson Plans</h2>
+        <p>Open the standalone HTML for the exact instructional day you need.</p>
+      </div>
+
+      <div class="lesson-library">
+        <div class="lesson-library-header">
+          <div>
+            <p class="eyebrow">Chapter 1 · Teacher Resources</p>
+            <h3>Daily Lesson Library</h3>
+            <p>Lessons 1.1 through 1.5, organized by instructional day.</p>
+          </div>
+          <span class="lesson-count">11 daily plans</span>
+        </div>
+
+        <div class="lesson-list">
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.1</p>
+              <h4 class="lesson-title">Algebraic Expressions</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-1-algebraic-expressions-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-1-algebraic-expressions-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.2</p>
+              <h4 class="lesson-title">Adding and Subtracting Linear Expressions</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-2-adding-subtracting-linear-expressions-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-2-adding-subtracting-linear-expressions-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.3</p>
+              <h4 class="lesson-title">Solving Simple Equations</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-3-solving-simple-equations-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-3-solving-simple-equations-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.4</p>
+              <h4 class="lesson-title">Solving Multiple-Step Equations</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-4-solving-multiple-step-equations-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-4-solving-multiple-step-equations-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.5</p>
+              <h4 class="lesson-title">Solving Equations with Variables on Both Sides</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-2.html">Day 2</a>
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-3.html">Day 3</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>Beggs Public Schools · Grade 8 Mathematics</strong><br>
+      Unit resources are organized for practical classroom use and ongoing revision.
+    </footer>
+  </main>
+</body>
+</html>

@@ -318,6 +318,149 @@
       font-weight: 800;
     }
 
+
+    .lesson-library {
+      overflow: hidden;
+      background: var(--paper-2);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-library-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px 26px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.06), transparent 62%),
+        var(--navy-2);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .lesson-library-header h3 {
+      margin: 4px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .lesson-library-header p {
+      margin: 6px 0 0;
+      color: #cbd3df;
+      line-height: 1.5;
+    }
+
+    .lesson-count {
+      flex: 0 0 auto;
+      padding: 8px 11px;
+      color: #3f320b;
+      background: var(--gold-soft);
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .lesson-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .lesson-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) minmax(280px, auto);
+      gap: 18px;
+      align-items: center;
+      padding: 19px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lesson-row:last-child {
+      border-bottom: 0;
+    }
+
+    .lesson-id {
+      margin: 0 0 4px;
+      color: var(--indigo);
+      font-size: 0.74rem;
+      font-weight: 850;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .lesson-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      line-height: 1.25;
+    }
+
+    .day-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .day-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 82px;
+      min-height: 40px;
+      padding: 9px 13px;
+      color: var(--white);
+      background: var(--indigo);
+      border: 1px solid var(--indigo);
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.16s ease, background 0.16s ease;
+    }
+
+    .day-link:hover,
+    .day-link:focus-visible {
+      transform: translateY(-2px);
+      background: #2d48a8;
+    }
+
+    .resource-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 14px;
+      padding: 18px 22px;
+      color: var(--text);
+      background: var(--paper);
+      border-left: 7px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .resource-strip strong {
+      display: block;
+      margin-bottom: 3px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+    }
+
+    .resource-strip span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .resource-link {
+      flex: 0 0 auto;
+      color: var(--indigo);
+      font-weight: 850;
+      text-decoration: none;
+    }
+
     .footer {
       margin-top: 38px;
       padding: 18px 4px 0;
@@ -348,6 +491,20 @@
 
       .unit-grid {
         grid-template-columns: 1fr;
+      }
+
+      .lesson-library-header,
+      .resource-strip {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lesson-row {
+        grid-template-columns: 1fr;
+      }
+
+      .day-links {
+        justify-content: flex-start;
       }
 
       .map-card {
@@ -399,6 +556,7 @@
       <nav class="hero-actions" aria-label="Quick links">
         <a class="button primary" href="curriculum-map8.html">Open Curriculum Map</a>
         <a class="button secondary" href="#unit-plans">Browse Unit Plans</a>
+        <a class="button secondary" href="#chapter-1-lessons">Chapter 1 Lessons</a>
       </nav>
     </header>
 
@@ -507,6 +665,83 @@
           <p>Use data displays and probability models to describe and predict outcomes.</p>
           <span class="open-label">Open Unit 8 →</span>
         </a>
+      </div>
+    </section>
+
+
+    <section class="section" id="chapter-1-lessons" aria-labelledby="chapter-1-heading">
+      <div class="section-heading">
+        <h2 id="chapter-1-heading">Chapter 1 Lesson Plans</h2>
+        <p>Open the standalone teacher-facing HTML for each instructional day.</p>
+      </div>
+
+      <div class="lesson-library">
+        <div class="lesson-library-header">
+          <div>
+            <p class="eyebrow">Unit 1 · Expressions &amp; Equations</p>
+            <h3>Chapter 1 Daily Lesson Library</h3>
+            <p>Lessons 1.1 through 1.5, organized by instructional day.</p>
+          </div>
+          <span class="lesson-count">11 daily plans</span>
+        </div>
+
+        <div class="lesson-list">
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.1</p>
+              <h4 class="lesson-title">Algebraic Expressions</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-1-algebraic-expressions-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-1-algebraic-expressions-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.2</p>
+              <h4 class="lesson-title">Adding and Subtracting Linear Expressions</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-2-adding-subtracting-linear-expressions-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-2-adding-subtracting-linear-expressions-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.3</p>
+              <h4 class="lesson-title">Solving Simple Equations</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-3-solving-simple-equations-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-3-solving-simple-equations-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.4</p>
+              <h4 class="lesson-title">Solving Multiple-Step Equations</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-4-solving-multiple-step-equations-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-4-solving-multiple-step-equations-day-2.html">Day 2</a>
+            </div>
+          </article>
+
+          <article class="lesson-row">
+            <div>
+              <p class="lesson-id">Lesson 1.5</p>
+              <h4 class="lesson-title">Solving Equations with Variables on Both Sides</h4>
+            </div>
+            <div class="day-links">
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-1.html">Day 1</a>
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-2.html">Day 2</a>
+              <a class="day-link" href="lesson-1-5-solving-equations-variables-both-sides-day-3.html">Day 3</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
